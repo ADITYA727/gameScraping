@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+
+  <h2>Game Listing Here</h2>
+  <p>------------------------------------------------------------------------------</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Game Name</th>
+        <th>Game Description URL</th>
+        <th>Platform</th>
+        <th>No of Player</th>
+        <th>Developer</th>
+        <th>Publisher</th>
+        <th>Genre</th>
+        <th>Release Date</th>
+        <th>Rating</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        {% for i in data %}
+      <tr>
+        <td>{{i.game_fk.gamename}}</td>
+        <td><a href="{{i.game_fk.releaseURL}}" target="_blank">Go Decription Page</a></td>
+        <td>{{i.platform}}</td>
+        <td>{{i.no_of_player}}</td>
+        <td>{{i.developer}}</td>
+       <td>{{i.publisher}}</td>
+        <td>{{i.genre}}</td>
+        <td>{{i.release_date}}</td>
+       <td>{{i.industry_rating}}</td>
+       
+        <td><img  style="height:50px;width:50px" src="{{i.gameImage}}"> </td>
+      </tr>
+      {% endfor %}
+     
+    </tbody>
+  </table>
+
+
+</body>
+</html>

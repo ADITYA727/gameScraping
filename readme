@@ -1,0 +1,36 @@
+Virtual Enviroment
+=====================
+
+Installing Virtual ENV  (OS-Ubuntu)
+-------------------------------------
+sudo apt install python3-virtualenv
+
+Checking ENV version
+------------------------
+virtualenv --version
+
+Creating ENV Enviroment scrapEnv
+--------------------------------
+virtualenv scrapEnv
+
+Activating ENV
+----------------------------------
+source scrapEnv/bin/activate
+
+
+Step to Test Project
+=========================
+(i) Create Virtual Enviroment
+(ii) Run Command pip install -r requiremenst.xt
+
+For Scrap Data
+=================
+http://localhost:8000?gameyear=2020  chnage  year e.g. 2021, 2022
+
+for check Scrap Data
+========================
+http://localhost:8000
+
+
+
+
